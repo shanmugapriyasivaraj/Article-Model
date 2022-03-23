@@ -1,0 +1,81 @@
+body {
+  font-family: "Inter", sans-serif;
+  /* width: auto; */
+}
+/* Dark blue:hsl(240,38%,20%) */
+/* Grayish Blue : hsl(240,18%,77%) */
+
+:root {
+  font-size: 32px;
+}
+.user-info {
+  color: hsl(240, 38%, 20%);
+  font-weight: 300;
+  text-align: center;
+  background: url("./pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: 1rem;
+  grid-area: info;
+}
+.usre-pic {
+  height: 12rem;
+  width: 12rem;
+}
+.user-name {
+  color: hsl(240, 38%, 20%);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+.user-position {
+  color: hsl(240, 18%, 77%);
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 0;
+}
+.user-details {
+  display: grid;
+  justify-content: center;
+  background: url("./pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  padding: 3rem;
+  grid-template-areas:
+    "pic"
+    "info"
+    "work";
+}
+.user-pic-container {
+  background: url("./pattern-bg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 3rem;
+  grid-area: pic;
+}
+.buttons {
+  background-color: whitesmoke;
+  width: max-content;
+  padding: 10px;
+  display: flex;
+  gap: 1rem;
+  border-radius: 100rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 0.8rem;
+}
+.user-work-info {
+  grid-area: work;
+}
+
+@media (min-width: 800px) {
+  .user-details {
+    grid-template-areas:
+      "info info pic"
+      "work work pic";
+  }
+} ;
